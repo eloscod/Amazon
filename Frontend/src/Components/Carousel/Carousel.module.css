@@ -1,0 +1,32 @@
+/* Center the slide content */
+.carouselSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E3E6E6;
+  margin-top: 99.4px;
+}
+
+/* Style the image so it's centered with a maximum width */
+.carouselSlide img {
+  height: 600px;
+  width: auto;
+  max-width: 1550px; /* Limit the width so it's not full width */
+}
+
+.hero__img {
+  position: relative;
+}
+
+.hero__img::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255)
+  );
+}

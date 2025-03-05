@@ -1,0 +1,33 @@
+.resultsContainer {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.resultsHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.resultsHeader h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.resultsHeader p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.resultsHeader hr {
+  margin: 20px auto;
+  width: 80%;
+  border: 0;
+  border-top: 2px solid #eee;
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
