@@ -30,12 +30,15 @@ function ProductDetail() {
       {loading ? (
         <Loader />
       ) : (
-        <SingleProduct data={product} flex={true} desc={true} renderAddToCart={true} />
+        <SingleProduct
+          data={product}
+          flex={true}
+          desc={true}
+          renderAddToCart={true}
+        />
       )}
     </LayOut>
   );
 }
 
 export default ProductDetail;
-const greeting = "Hello, Quokka!";
-console.log(greeting);
