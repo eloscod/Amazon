@@ -8,9 +8,10 @@ import { IoIosSearch } from "react-icons/io";
 import { BiCart } from "react-icons/bi";
 import LowerHeader from "./LowerHeader";
 import { DataContext } from "../DataProvider/DataProvider";
+import { auth } from "../../Utility/firebase";
 
 function Header() {
-  const [{ basket }, dispatch] = useContext(DataContext);
+  const [{ user, basket }, dispatch] = useContext(DataContext);
   const totalItemOnCart = basket?.reduce((amount, item) => {
     return item.amount + amount;
   }, 0);
@@ -50,9 +51,21 @@ function Header() {
                 <option value="en">EN</option>
               </select>
             </div>
-            <Link to="/auth" className={classes.accountLink}>
+            <Link to={!user && "/auth"} className={classes.accountLink}>
               <div>
-                <p>Sign In</p>
+                <div>
+                  {user ? (
+                    <>
+                      <p>Hello, {user?.email?.split("@")[0]}</p>
+                      <span onClick={() => auth.signOut()}>SignOut</span>
+                    </>
+                  ) : (
+                    <>
+                      <p> Hello, Sign In</p>
+                    </>
+                  )}
+                </div>
+
                 <span>Account &amp; Lists</span>
               </div>
             </Link>

@@ -1,0 +1,112 @@
+.payment__header {
+  margin: 20px auto;
+  margin-top: 110px;
+  background-color: #fff;
+  padding: 16px 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+  max-width: 1200px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Main payment container */
+.payment {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Simple divider styling */
+.payment hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* A generic flex container for each payment section (address, review, payment method) */
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.flex h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.flex img {
+  width: 100px !important;
+}
+
+.flex div {
+  height: auto !important;
+}
+
+/* Payment card container for Stripe CardElement */
+.payment__card__container {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  max-width: 500px; /* Adjust as needed */
+}
+
+.payment__card__container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Style for the error message */
+.payment__card__container small {
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* Layout for the total and button */
+.payment__card__container div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Button styling */
+.payment__card__container button {
+  background-color: #f0c14b;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #a88734;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  width: fit-content;
+}
+
+.payment__card__container button:hover {
+  background-color: #ddb347;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .payment {
+    padding: 10px;
+  }
+
+  .payment__header {
+    margin: 10px auto;
+    font-size: 1.2rem;
+  }
+
+  .payment__card__container {
+    max-width: 100%;
+  }
+}

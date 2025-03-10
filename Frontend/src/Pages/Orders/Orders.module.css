@@ -1,0 +1,46 @@
+/* Container for the entire Orders page */
+.ordersContainer {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+/* Header for the "Your Orders" title */
+.ordersHeader {
+  margin-bottom: 20px;
+}
+
+/* Empty state message */
+.emptyMessage {
+  color: #888;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+/* Container for each individual order */
+.singleOrder {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+/* A subtle divider within each order */
+.singleOrder hr {
+  margin: 10px 0;
+}
+
+.singleOrder img {
+  width: 100px !important;
+}
+
+.singleOrder div {
+  height: auto !important;
+}
+
+/* ID label styling (optional) */
+.orderId {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
