@@ -21,7 +21,7 @@ function Results() {
         console.log(res.data);
       })
       .catch((err) => {
-        console.log(err);
+        console.log("API Error", err);
         setLoading(false);
       });
   }, [categoryName]);
@@ -53,4 +53,3 @@ function Results() {
   );
 }
 export default Results;
-

@@ -1,1 +1,1 @@
-export const endPoint = "https:/fakestoreapi.com";
+export const endPoint = import.meta.env.VITE_API_URL;
