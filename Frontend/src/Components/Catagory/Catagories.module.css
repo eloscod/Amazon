@@ -1,12 +1,20 @@
 .catagories {
-  height: 350px;
-  width: 350px;
+  /* Let the card fill available space but limit its max dimensions */
+  width: 100%;
+  max-width: 350px;
+  /* Remove fixed height; use max-height instead */
+  max-height: 400px;
+  
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  
+  /* Flex layout for vertical alignment */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  
+  /* Margin & transition for spacing and hover effects */
   margin: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -19,11 +27,16 @@
 .catagories a {
   text-decoration: none;
   color: rgb(35, 35, 35);
+  
+  /* Fill the card while stacking content */
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  /* Ensure the link container spans the card */
   width: 100%;
   height: 100%;
+  
   padding: 10px;
 }
 
@@ -34,6 +47,7 @@
 }
 
 .catagories img {
+  /* Keep image within card width */
   width: 80%;
   object-fit: contain;
   max-height: 200px;
@@ -48,14 +62,34 @@
   text-transform: uppercase;
 }
 
-/* Optional container style for a grid layout of category cards */
+/* Responsive grid container for category cards */
 .Catagories__container {
   position: relative;
   max-width: 1500px;
   margin: auto;
-  margin-top: -350px;
+  
+  /* Use grid with auto-fit to adapt columns automatically */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   place-items: center;
+  
+  /* Adjust top margin as needed for your layout */
+  margin-top: -350px;
+}
+
+/* Optional: Additional media queries for smaller screens */
+@media (max-width: 768px) {
+  .catagories {
+    max-width: 300px;   /* Shrink the max width on tablets */
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .catagories {
+    max-width: 100%;    /* Card takes full width on mobile */
+    max-height: none;   /* Let it grow as needed */
+    margin: 10px auto;  /* Center horizontally */
+  }
 }
