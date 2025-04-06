@@ -21,10 +21,10 @@ function Auth() {
   });
 
   const [{ user }, dispatch] = useContext(DataContext);
-  console.log(user);
+  // console.log(user);
   const navigate = useNavigate();
   const dataLocatoinState = useLocation();
-  console.log(dataLocatoinState);
+  // console.log(dataLocatoinState);
 
   const signInHandler = async (e) => {
     e.preventDefault();
@@ -33,7 +33,7 @@ function Auth() {
 
     try {
       const userInfo = await signInWithEmailAndPassword(auth, email, password);
-      console.log("Signed in:", userInfo);
+      // console.log("Signed in:", userInfo);
       dispatch({
         type: type.SET_USER,
         user: userInfo.user,
@@ -58,7 +58,7 @@ function Auth() {
         email,
         password
       );
-      console.log("Account created:", userInfo);
+      // console.log("Account created:", userInfo);
       dispatch({
         type: type.SET_USER,
         user: userInfo.user,
